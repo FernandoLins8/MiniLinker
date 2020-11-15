@@ -17,7 +17,7 @@
     "prod": " yarn run server NODE_ENV=production",
     "watch:test": "jest --detectOpenHandles --forceExit --config jest.json",
     "server": "node -r ts-node/register -r tsconfig-paths/register www.ts",
-    "tsdev": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
+    "start": "ts-node-dev --transpile-only --ignore-watch node_modules src/server.ts",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js",
     "knex:seed": "knex --knexfile knexfile.ts seed:run"
   },
@@ -73,5 +73,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "engines": {
+    "node": "12.19.0"
   }
 }
